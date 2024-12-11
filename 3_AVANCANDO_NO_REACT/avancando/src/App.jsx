@@ -1,4 +1,5 @@
 import "./App.css";
+import ManageData from "./components/ManageData";
 
 import Paisagem from "./assets/2.png";
 
@@ -14,6 +15,7 @@ function App() {
         {/* Imagem em assets */}
         <img src={Paisagem} alt="Paisagem" className="img" />
       </div>
+      <ManageData />
     </div>
   );
 }
