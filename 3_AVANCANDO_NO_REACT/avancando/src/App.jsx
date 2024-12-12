@@ -1,5 +1,6 @@
 import "./App.css";
 import ManageData from "./components/ManageData";
+import ListRender from "./components/ListRender";
 
 import Paisagem from "./assets/2.png";
 
@@ -16,6 +17,7 @@ function App() {
         <img src={Paisagem} alt="Paisagem" className="img" />
       </div>
       <ManageData />
+      <ListRender />
     </div>
   );
 }
