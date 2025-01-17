@@ -1,6 +1,7 @@
 import "./App.css";
 import ManageData from "./components/ManageData";
 import ListRenderer from "./components/ListRenderer";
+import CondicionalRender from "./components/CondicionalRender";
 
 import Paisagem from "./assets/2.png";
 
@@ -18,6 +19,7 @@ function App() {
       </div>
       <ManageData />
       <ListRenderer />
+      <CondicionalRender />
     </div>
   );
 }
