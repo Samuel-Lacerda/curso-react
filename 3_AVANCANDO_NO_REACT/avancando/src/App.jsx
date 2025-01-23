@@ -4,6 +4,7 @@ import ListRenderer from "./components/ListRenderer";
 import CondicionalRender from "./components/CondicionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
+import Fragment from "./components/Fragment";
 
 import Paisagem from "./assets/2.png";
 import { useState } from "react";
@@ -48,6 +49,7 @@ function App() {
           newCar={car.newCar}
         />
       ))}
+      <Fragment propFrag="Teste com props" />
     </div>
   );
 }
