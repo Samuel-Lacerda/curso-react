@@ -8,6 +8,9 @@ import Fragment from "./components/Fragment";
 import Paisagem from "./assets/2.png";
 import { useState } from "react";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
+import Message from "./components/Message";
+import ChangeMessageState from "./components/ChangeMessageState";
 
 function App() {
   const name = "Samuel";
@@ -22,6 +25,12 @@ function App() {
   function showMessage() {
     console.log("Evento do elemento pai!");
   }
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
 
   return (
     <div className="App">
@@ -47,6 +56,7 @@ function App() {
       {/* loop em array de objetos */}
       {cars.map((car) => (
         <CarDetails
+          key={car.id}
           brand={car.brand}
           color={car.color}
           km={car.km}
@@ -59,6 +69,10 @@ function App() {
       </Container>
 
       {/* Executar função */}
+      <ExecuteFunction myFunction={showMessage} />
+      {/* State Lift */}
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   );
 }
