@@ -5,9 +5,9 @@ import CondicionalRender from "./components/CondicionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
-
 import Paisagem from "./assets/2.png";
 import { useState } from "react";
+import Container from "./components/Container";
 
 function App() {
   const name = "Samuel";
@@ -18,6 +18,10 @@ function App() {
     { id: 2, brand: "Porshe", color: "Verde", newCar: false, km: 10000 },
     { id: 3, brand: "Honda", color: "Preto", newCar: false, km: 2340 },
   ];
+
+  function showMessage() {
+    console.log("Evento do elemento pai!");
+  }
 
   return (
     <div className="App">
@@ -50,6 +54,11 @@ function App() {
         />
       ))}
       <Fragment propFrag="Teste com props" />
+      <Container myValue="testando">
+        <p>E este é o conteúdo!</p>
+      </Container>
+
+      {/* Executar função */}
     </div>
   );
 }
