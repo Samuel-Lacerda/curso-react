@@ -2,7 +2,16 @@ import "./Game.css";
 
 import React from "react";
 
-const Game = ({ verifyLetter }) => {
+const Game = ({
+  verifyLetter,
+  pickedWord,
+  pickedCategory,
+  letters,
+  guessedLetters,
+  wrongLetters,
+  guesses,
+  score,
+}) => {
   return (
     <div className="game">
       <p className="points">
@@ -12,6 +21,7 @@ const Game = ({ verifyLetter }) => {
       <h3 className="tip">
         Dica sobre a palavra: <span>Dica...</span>
       </h3>
+      <p>Você ainda tem XXX tentativa(s).</p>
       <div className="wordContainer">
         <span className="letter">A</span>
         <span className="blackSquare"></span>
